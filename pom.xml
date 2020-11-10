@@ -38,6 +38,7 @@
 						<password>Njc@1234</password>
 						<applicationName>sample-jenkins-deployment-slsiddam</applicationName>
 						<environment>Sandbox</environment>
+						<objectStoreV2>true</objectStorev2>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
 					</cloudHubDeployment>
