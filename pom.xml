@@ -39,7 +39,6 @@
 						<applicationName>sample-jenkins-deployment</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
-						<objectstoreV2>true</objectstoreV2>
 						<worker>1</worker>
 					</cloudHubDeployment>
 				</configuration>
