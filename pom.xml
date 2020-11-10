@@ -36,7 +36,7 @@
 						<muleVersion>4.3.0</muleVersion>
 						<username>njctrail</username>
 						<password>Njc@1234</password>
-						<applicationName>sample-jenkins-deployment</applicationName>
+						<applicationName>sample-jenkins-deployment-slsiddam</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
