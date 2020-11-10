@@ -31,6 +31,16 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.3.0</muleVersion>
+						<username>njctrail</username>
+						<password>Njc@1234</password>
+						<applicationName>sample-jenkins-deployment</applicationName>
+						<environment>Sandbox</environment>
+						<workerType>MICRO</workerType>
+						<worker>1</worker>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		<plugin>
