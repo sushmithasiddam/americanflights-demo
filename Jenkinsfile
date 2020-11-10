@@ -15,7 +15,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        bat 'mvn clean package deploy -DmuleDeploy -Danypoint.username=njctrail -Danypoint.password=Njc@1234 -DapplicationName=americanflights-demo-sls '
+        bat 'mvn clean -Dmaven.repo.local=C:/Users/sushmitha/.m2/repository package deploy -DmuleDeploy -Danypoint.username=njctrail -Danypoint.password=Njc@1234 -DapplicationName=americanflights-demo-sls '
       }
     }
 
