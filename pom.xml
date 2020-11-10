@@ -39,7 +39,7 @@
 						<applicationName>sample-jenkins-deployment</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
-						<worker>1</worker>
+						<workers>1</workers>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
