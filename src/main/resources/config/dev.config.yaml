@@ -5,3 +5,4 @@ http:
 anypoint:
   username: "njctrail"
   password: "![VA64ksoHbZLGWR+8uBsHew==]"
+  applicationName: "sample-jenkins-deployment-slsiddam"

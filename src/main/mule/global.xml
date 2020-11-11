@@ -16,6 +16,6 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
 	<secure-properties:config name="securePropertiesConfig" doc:name="Secure Properties Config" doc:id="2c75236a-f575-434c-928f-e5729e6829cc" file="config\${env}.config.yaml" key="${key}" >
 		<secure-properties:encrypt algorithm="Blowfish" />
 	</secure-properties:config>
-	<global-property doc:name="Global Property" doc:id="0944a73c-f037-4832-bc50-e32259b9e9eb" name="env" value="${env}" />	
+	<global-property doc:name="Global Property" doc:id="0944a73c-f037-4832-bc50-e32259b9e9eb" name="env" value="dev" />	
 
 </mule>
