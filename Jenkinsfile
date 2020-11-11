@@ -16,7 +16,7 @@ pipeline {
     stage('fetch properties') {
       steps {
         script {
-          readProps= readProperties file: 'americanflights-demo/src/main/resources/email.properties'
+          readProps= readProperties file: '/src/main/resources/email.properties'
           echo "${readProps['email.to']}"
         }
 
@@ -26,6 +26,7 @@ pipeline {
     stage('Deploy') {
       steps {
       	withCredentials([usernamePassword(credentialsId: 'anypoint_credentials', passwordVariable: 'ANYPOINT_PASSWORD', usernameVariable: 'ANYPOINT_USERNAME')]) {
+    		echo "${ANYPOINT_USERNAME}"
     		bat 'mvn clean -Dmaven.repo.local=C:/Users/sushmitha/.m2/repository package deploy -DmuleDeploy -DskipTests -Dkey=mule -Denv=dev -Danypoint.username=${ANYPOINT_USERNAME} -Danypoint.password=${ANYPOINT_PASSWORD} -Danypoint.applicationName=sample-jenkins-deployment-slsiddam'
 		}
       	
