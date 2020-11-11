@@ -15,7 +15,11 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        bat 'mvn clean -Dmaven.repo.local=C:/Users/sushmitha/.m2/repository package deploy -DmuleDeploy -DskipTests -Dkey=mule -Denv=dev -Danypoint.username=njctrail -Danypoint.password=Njc@1234 -Danypoint.applicationName=sample-jenkins-deployment-slsiddam'
+      	withCredentials([usernamePassword(credentialsId: 'anypoint_credentials', passwordVariable: 'ANYPOINT_PASSWORD', usernameVariable: 'ANYPOINT_USERNAME')]) {
+    		bat 'mvn clean -Dmaven.repo.local=C:/Users/sushmitha/.m2/repository package deploy -DmuleDeploy -DskipTests -Dkey=mule -Denv=dev -Danypoint.username=$ANYPOINT_USERNAME -Danypoint.password=$ANYPOINT_PASSWORD -Danypoint.applicationName=sample-jenkins-deployment-slsiddam'
+		}
+      	
+        
       }
     }
 
