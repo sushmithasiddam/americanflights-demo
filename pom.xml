@@ -34,13 +34,17 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
-						<username>njctrail</username>
-						<password>Njc@1234</password>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
 						<applicationName>sample-jenkins-deployment-slsiddam</applicationName>
 						<environment>Sandbox</environment>
 						<objectStoreV2>true</objectStoreV2>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
+						<properties>
+							<key>${key}</key>
+							<env>${env}</env>
+						</properties>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
@@ -95,6 +99,12 @@
             <version>2.2.5</version>
             <classifier>mule-plugin</classifier>
             <scope>test</scope>
+        </dependency>
+    	<dependency>
+            <groupId>com.mulesoft.modules</groupId>
+            <artifactId>mule-secure-configuration-property-module</artifactId>
+            <version>1.2.3</version>
+            <classifier>mule-plugin</classifier>
         </dependency>
     </dependencies>
 

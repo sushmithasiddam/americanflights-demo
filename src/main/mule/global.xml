@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
+	<http:listener-config name="httpListenerConfig" doc:name="HTTP Listener config" doc:id="e154fd2b-8b06-42c5-aa8a-3614fc9b16a3" >
+		<http:listener-connection host="${http.host}" port="${http.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="18f556db-9ce1-4f34-999f-2acfd5e2ebe0" file="config\${env}.config.yaml" />
+	<http:request-config name="httpRequestConfiguration" doc:name="HTTP Request configuration" doc:id="ac87e460-faa5-4636-8d4e-e20a926a82b8" basePath="/api" >
+		<http:request-connection host="training4-american-ws.cloudhub.io" />
+	</http:request-config>
+	<secure-properties:config name="securePropertiesConfig" doc:name="Secure Properties Config" doc:id="2c75236a-f575-434c-928f-e5729e6829cc" file="config\${env}.config.yaml" key="${key}" >
+		<secure-properties:encrypt algorithm="Blowfish" />
+	</secure-properties:config>	
+
+</mule>
