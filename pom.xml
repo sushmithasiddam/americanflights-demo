@@ -36,10 +36,11 @@
 						<muleVersion>4.3.0</muleVersion>
 						<username>njctrail</username>
 						<password>Njc@1234</password>
-						<applicationName>sample-jenkins-deployment</applicationName>
+						<applicationName>sample-jenkins-deployment-slsiddam</applicationName>
 						<environment>Sandbox</environment>
+						<objectStoreV2>true</objectStoreV2>
 						<workerType>MICRO</workerType>
-						<worker>1</worker>
+						<workers>1</workers>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
