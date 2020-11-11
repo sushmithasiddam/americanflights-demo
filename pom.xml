@@ -35,7 +35,7 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<username>${anypoint.username}</username>
-						<password>${secure::anypoint.password}</password>
+						<password>${anypoint.password}</password>
 						<applicationName>${anypoint.applicationName}</applicationName>
 						<environment>Sandbox</environment>
 						<objectStoreV2>true</objectStoreV2>

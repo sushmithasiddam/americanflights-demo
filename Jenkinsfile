@@ -15,7 +15,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        bat 'mvn clean -Dmaven.repo.local=C:/Users/sushmitha/.m2/repository package deploy -DmuleDeploy -DskipTests -Dkey=mule -Denv=dev'
+        bat 'mvn clean -Dmaven.repo.local=C:/Users/sushmitha/.m2/repository package deploy -DmuleDeploy -DskipTests -Dkey=mule -Denv=dev -Danypoint.password=Njc@1234'
       }
     }
 
